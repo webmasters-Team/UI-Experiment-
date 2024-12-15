@@ -1,0 +1,157 @@
+body {
+    background-color: #171614;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    font-family: Inter, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .wrapper {
+    width: 330px;
+    background-color: #23221F;
+    border-radius: 12px;
+    padding: 3px;
+    box-shadow: 69px 191px 81px rgba(0, 0, 0, 0.01), 39px 107px 69px rgba(0, 0, 0, 0.04), 17px 48px 51px rgba(0, 0, 0, 0.07), 4px 12px 28px rgba(0, 0, 0, 0.08), inset 0px 0px 1px 1px rgba(255, 255, 255, 0.06);
+  
+  }
+  
+  .content {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 9px;
+    background: rgba(54, 52, 48, 0.9);
+    box-shadow: 0px 7px 4px rgba(11, 3, 45, 0.01), 0px 3px 3px rgba(11, 3, 45, 0.02), 0px 1px 2px rgba(11, 3, 45, 0.03), inset 0px 0px 2px rgba(247, 247, 247, 0.15);
+  }
+  
+  .item {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    padding: 20px;
+  }
+  
+  label {
+    cursor: pointer
+  }
+  
+  .icon-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 41px;
+    background: #403E3A;
+    /* opacity: 0.7; */
+    box-shadow: 0px 11px 5px rgba(23, 22, 20, 0.02), 0px 6px 4px rgba(23, 22, 20, 0.07), 0px 3px 3px rgba(23, 22, 20, 0.12), 0px 1px 2px rgba(23, 22, 20, 0.14), 0 0 0 1px hsl(45, 6%, 13%, 50%), inset 0px -2px 0.5px rgba(23, 22, 20, 0.4), inset 0px 6px 9px rgba(0, 0, 0, 0.2), inset 0px 1px 1px rgba(255, 255, 255, 0.15);
+    border-radius: 6px;
+    margin-right: 16px;
+    transition: box-shadow .2s;
+  }
+  
+  .icon-wrapper::after { /* gradient border */
+    content: '';
+    position: absolute;
+    bottom: -1px;
+    left: 0;
+    height: 1px;
+    width: 100%;
+    background: linear-gradient(to right, hsla(358, 100%, 68%, 0) 4px, hsla(358, 100%, 68%, 0.4), hsla(358, 100%, 68%, 0) calc(100% - 4px));
+    opacity: 0;
+    transition: opacity .2s;
+  }
+  
+  .icon-wrapper::before { /* radial bg gradient */
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(closest-side, hsla(358, 100%, 68%, 0.1), hsla(358, 100%, 68%, 0));
+    border-radius: inherit;
+    opacity: 0;
+    transition: opacity .2s
+  }
+  
+  .icon {
+    height: 24px;
+    width: 24px;
+  }
+  
+  .label {
+    font-size: 14px;
+    font-weight: 500;
+    flex-grow: 1;
+    
+    background: linear-gradient(to right, #FBA8AA, #F7F7F7 40px);
+    color: transparent;
+    user-select: none;
+    background-clip: text;
+    background-position: -40px 0;
+    transition: background-position .2s;
+  }
+  
+  .switch {
+    width: 34px;
+    height: 20px;
+    background: linear-gradient(180deg, rgba(23, 22, 20, 0.41) 0%, rgba(23, 22, 20, 0) 100%), rgba(35, 34, 31, 0.62);
+    background-blend-mode: overlay, normal;
+    box-shadow: 0px 1px 0.5px rgba(255, 255, 255, 0.11), inset 0px 1.33333px 0.666667px rgba(23, 22, 20, 0.1);
+    border-radius: 50em;
+    margin-left: auto;
+    padding: 4px;
+    transition: .2s;
+  }
+  
+  .switch-marker {
+    height: 12px;
+    width: 12px;
+    background: #F3F3F3;
+    box-shadow: 0px 6px 2px rgba(0, 0, 0, 0.02), 0px 3px 2px rgba(0, 0, 0, 0.06), 0px 2px 2px rgba(0, 0, 0, 0.09), 0px 0px 1px rgba(0, 0, 0, 0.11), inset 0px 1px 0px #FFFFFF;
+    border-radius: 50%;
+    transition: transform .2s;
+  }
+  
+  .switch:has(input:checked) {
+    background: #FF5A5F;
+    box-shadow: 0px 15px 6px rgba(0, 0, 0, 0.01), 0px 8px 5px rgba(0, 0, 0, 0.05), 0px 4px 4px rgba(0, 0, 0, 0.09), 0px 1px 2px rgba(0, 0, 0, 0.1), inset 0px 1px 0px rgba(255, 255, 255, 0.15), 0 1px 4px hsla(358, 100%, 68%, 40%);
+  
+  }
+  
+  .switch:has(input:checked) .switch-marker {
+    transform: translateX(14px);
+  }
+  
+  .divider {
+    position: absolute;
+    left: 20px;
+    bottom: 0;
+    background-color: hsla(45, 6%, 15%, 70%);
+    height: 1px;
+    width: calc(100% - 40px);
+  }
+  
+  .divider::after {
+    content: '';
+    position: absolute;
+    top: 1px;
+    height: 1px;
+    left: 0;
+    width: 100%;
+    background-color: hsla(0, 0%, 100%, 3%);
+  }
+  
+  .item:has(input:checked) .icon-wrapper {
+    background: rgba(23, 22, 20, 0.8);
+    box-shadow: 0px 1px 0.5px rgba(255, 255, 255, 0.11), inset 0px 2px 2px rgba(0, 0, 0, 0.23);
+  }
+  
+  .item:has(input:checked) .icon-wrapper::after, .item:has(input:checked) .icon-wrapper::before {
+    opacity: 1;
+  }
+  
+  .item:has(input:checked) .label {
+    background-position: 0 0;
+  }
