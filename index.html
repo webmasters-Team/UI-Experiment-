@@ -1,0 +1,69 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webmasters small projects</title>
+</head>
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tailwindcss/2.2.19/tailwind.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/inter-ui/4.0.2/inter.css">
+<script src="https://unpkg.com/@rive-app/canvas@2.9.1"></script>
+<body>
+    
+    <div class="wrapper js-wrapper">
+        <div class="content">
+          <ul>
+            <li class="relative">
+              <div class="item">
+                <figure class="icon-wrapper">
+                  <canvas class="icon js-riv-canvas" role="img" aria-label="Lock icon" width="24" height="24"></canvas>
+                </figure>
+                
+                <label class="label" for="switch-checkbox-1">Share Session</label>
+                
+                <label class="switch" for="switch-checkbox-1">
+                  <input class="sr-only" type="checkbox" id="switch-checkbox-1" data-checkbox="0">
+                  <div class="switch-marker" aria-hidden="true"></div>
+                </label>
+              </div>
+              
+              <div class="divider" aria-hidden="true"></div>
+            </li>
+            
+            <li class="relative">
+              <div class="item">
+                <figure class="icon-wrapper">
+                  <canvas class="icon js-riv-canvas" role="img" aria-label="Password icon" width="24" height="24"></canvas>
+                </figure>
+                
+                <label class="label" for="switch-checkbox-2">Request Passcode</label>
+                
+                <label class="switch" for="switch-checkbox-2">
+                  <input class="sr-only" type="checkbox" id="switch-checkbox-2" data-checkbox="1">
+                  <div class="switch-marker" aria-hidden="true"></div>
+                </label>
+              </div>
+              
+              <div class="divider" aria-hidden="true"></div>
+            </li>
+            
+            <li class="relative">
+              <div class="item">
+                <figure class="icon-wrapper">
+                  <canvas class="icon js-riv-canvas" role="img" aria-label="Envelope icon" width="24" height="24"></canvas>
+                </figure>
+                
+                <label class="label" for="switch-checkbox-3">Request Guest Email</label>
+                
+                <label class="switch" for="switch-checkbox-3">
+                  <input class="sr-only" type="checkbox" id="switch-checkbox-3" data-checkbox="2">
+                  <div class="switch-marker" aria-hidden="true"></div>
+                </label>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+<script src="script.js"></script>    
+</body>
+</html>
